@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Alert, Button, Text, TextInput, View } from 'react-native';
 import { supabase } from './supabaseClient';
 
+
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
