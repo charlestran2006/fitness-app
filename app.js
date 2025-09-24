@@ -1,7 +1,9 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Button, Text, View } from 'react-native';
-import LoginScreen from './LoginScreen'; // import new screen
+import LoginScreen from './LoginScreen';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
@@ -17,9 +19,6 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-
-const Stack = createNativeStackNavigator();
 
 function HomeScreen({ navigation }) {
   return (
@@ -63,19 +62,5 @@ function SettingsScreen() {
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>⚙️ Settings Screen</Text>
     </View>
-  );
-}
-
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Workouts" component={WorkoutsScreen} />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
-        <Stack.Screen name="Nutrition" component={NutritionScreen} />
-        <Stack.Screen name="Settings" component={SettingsScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
   );
 }
